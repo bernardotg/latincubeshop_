@@ -28,6 +28,9 @@ export const AuthProvider = ({ children }) => {
   const signInWithGoogle = async () => {
     return supabase.auth.signInWithOAuth({
       provider: 'google',
+      options: {
+        redirectTo: window.location.origin
+      }
     });
   };
 
@@ -42,6 +45,9 @@ export const AuthProvider = ({ children }) => {
     return supabase.auth.signUp({
       email,
       password,
+      options: {
+        emailRedirectTo: window.location.origin
+      }
     });
   };
 

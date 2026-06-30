@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
           // No existe carrito para este usuario, crearlo
           const { data: newCart, error: insertError } = await supabase
             .from('carts')
-            .insert({ user_id: user.id })
+            .insert({ user_id: user.id, user_email: user.email })
             .select()
             .single();
             
