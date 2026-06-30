@@ -1,0 +1,269 @@
+/* ===========================
+   OrderHistory Page Styles
+   =========================== */
+
+.oh-page {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  min-height: 80vh;
+  color: white;
+}
+
+.oh-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.oh-page-header h1 {
+  font-size: 2rem;
+  margin: 0 0 6px 0;
+}
+
+.oh-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.oh-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+}
+
+/* ---- Loading ---- */
+.oh-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 0;
+  color: var(--text-secondary);
+}
+
+.oh-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--accent-yellow);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Empty ---- */
+.oh-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.oh-empty h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.oh-empty p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ---- No-user screen ---- */
+.oh-no-user {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--bg-main);
+}
+
+.oh-no-user-inner {
+  text-align: center;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.oh-no-user-inner h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.oh-no-user-inner p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.oh-no-user-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* ---- Order List ---- */
+.oh-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- Order Card ---- */
+.oh-card {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.oh-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.oh-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.oh-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.oh-order-id {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-family: monospace;
+  letter-spacing: 0.05em;
+}
+
+.oh-order-date {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.oh-card-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.oh-status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.oh-total {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+}
+
+/* ---- Items inside card ---- */
+.oh-items {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.oh-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.oh-item-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.oh-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.oh-item-name {
+  margin: 0 0 4px 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.oh-item-price {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .oh-page {
+    padding-top: 140px;
+  }
+
+  .oh-page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .oh-back-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .oh-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .oh-card-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .oh-item-img {
+    width: 44px;
+    height: 44px;
+  }
+}
